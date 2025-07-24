@@ -13,13 +13,62 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
+// let count = 0
+
+// function howManyTimes(array, word){
+// for (i=0 ; i<array.length ; i++){
+//   console.log(array[i])
+//   if (array[i]===word){
+//     count++
+    
+//   }
+//   return count
+// }
+// }
+
+// howManyTimes(repeatedWords,"matter")
+// console.log(count)
 
 
+   
+    
+function howManyTimes(array, word){
+
+  let count=0
+  
+for (i=0 ; i<array.length ; i++){
+  if (array[i]===word){
+    count++
+  }
+  
+}
+  return count
+}
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+
+/*
+Declare a function named createSequence. 
+The function should take one argument: a number (n). 
+The function should return an array of numbers in the range from 0 to n.
+*/
+
+
+function createSequence(num) {
+  let arr=[]
+  
+  if(num===0){
+    return arr
+  }
+
+  for(i=0;i<=num;i++){
+    arr[i]=i
+  }
+  return arr
+
+}
+
 
 
 
@@ -27,7 +76,15 @@ function createSequence() {}
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(firstArray, multiplier){
+
+let secondArray = []
+
+firstArray.forEach(function (element,index) {
+   secondArray[index]=element * multiplier })
+
+  return secondArray
+};
 
 
 
@@ -36,8 +93,41 @@ function multiplyBy() {}
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(original, toRemove) {
+  
+  let newArray=[]
+  let wordToRemove=""
+console.log(original + " - - - - " + toRemove )
 
+
+// for (i=0;i<toRemove.length; i++){
+//   wordToRemove=toRemove[i]
+  
+//   for(j=0;j<original.length;j++){
+//     if (original[j] === wordToRemove){
+//       original.splice(j,1)
+//     }
+//     console.log(original)
+//   }
+// }
+
+for (i=0;i<original.length; i++){
+  wordToAdd=original[i]
+  
+  for(j=0;j<toRemove.length;j++){
+    if (toRemove[j] === wordToAdd){
+      newArray.push(wordToAdd)
+    } 
+    console.log(original)
+  }
+}
+
+}
+//go through every word toRemove
+
+//check if it is in the original array
+// if it is remove it from original array
+//return formatted original array
 
 
 
