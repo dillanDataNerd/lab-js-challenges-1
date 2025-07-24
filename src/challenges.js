@@ -90,45 +90,27 @@ firstArray.forEach(function (element,index) {
 
 
 // Iteration 4 | Filter Out
+
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
+  
 function filterOut(original, toRemove) {
+
+let newArray=[]
   
-  let newArray=[]
-  let wordToRemove=""
-console.log(original + " - - - - " + toRemove )
-
-
-// for (i=0;i<toRemove.length; i++){
-//   wordToRemove=toRemove[i]
-  
-//   for(j=0;j<original.length;j++){
-//     if (original[j] === wordToRemove){
-//       original.splice(j,1)
-//     }
-//     console.log(original)
-//   }
-// }
-
 for (i=0;i<original.length; i++){
-  wordToAdd=original[i]
-  
-  for(j=0;j<toRemove.length;j++){
-    if (toRemove[j] === wordToAdd){
-      newArray.push(wordToAdd)
-    } 
-    console.log(original)
+  let pet = original[i] 
+  if (toRemove.includes(pet)===false){
+    newArray.push(pet)
   }
 }
-
+  return newArray
 }
-//go through every word toRemove
 
-//check if it is in the original array
-// if it is remove it from original array
-//return formatted original array
+const result = filterOut(original, toRemove)
 
+console.log(result)
 
 
 // Iteration 5 | Unique Arrays
@@ -146,7 +128,23 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+
+function uniquifyArray() {
+  let newArray=[]
+for(i=0 ; i<duplicateWords.length ; i++){
+    if (newArray.includes(duplicateWords[i])=== false){
+            newArray.push(duplicateWords[i]) 
+    }
+
+    else {continue}
+
+    }
+  return newArray
+}
+
+result = uniquifyArray(duplicateWords)
+
+console.log(result)
 
 
 
