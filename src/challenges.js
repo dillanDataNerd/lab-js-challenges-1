@@ -110,9 +110,6 @@ for (i=0;i<original.length; i++){
 
 const result = filterOut(original, toRemove)
 
-console.log(result)
-
-
 // Iteration 5 | Unique Arrays
 const duplicateWords = [
   "crab",
@@ -129,22 +126,49 @@ const duplicateWords = [
 ];
 
 
-function uniquifyArray() {
-  let newArray=[]
-for(i=0 ; i<duplicateWords.length ; i++){
-    if (newArray.includes(duplicateWords[i])=== false){
-            newArray.push(duplicateWords[i]) 
-    }
+function uniquifyArray(duplicateWords) {
 
-    else {continue}
+let wordsSeen=[]
+let newArray=[]
+
+console.log("original array: " + duplicateWords)
+
+for (i=0;i<duplicateWords.length;i++){
+
+let wordToCheck=duplicateWords[i]
+
+  if (!(wordsSeen.includes(wordToCheck))){
+    newArray.push(wordToCheck)
+      console.log("new Array: " + newArray)
 
     }
+      wordsSeen.push(wordToCheck)
+        console.log("words seen: " + wordsSeen)
+
+
+  }
+
   return newArray
 }
 
-result = uniquifyArray(duplicateWords)
+// Maels answers
 
-console.log(result)
+
+//   let newArray=[]
+// for(i=0 ; i<duplicateWords.length ; i++){
+//     if (newArray.includes(duplicateWords[i])=== false){
+//             newArray.push(duplicateWords[i]) 
+//     }
+
+//     else {continue}
+
+//     }
+//   return newArray
+// }
+
+// result = uniquifyArray(duplicateWords)
+
+// console.log(result)
 
 
 
